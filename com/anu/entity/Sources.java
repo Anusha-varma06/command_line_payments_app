@@ -31,7 +31,7 @@ enum SourceType {
         throw new IllegalArgumentException("Invalid source type code: " + code);
     }
 
-    // Method to get SourceType by name
+    
     public static SourceType fromName(String name) {
         for (SourceType type : SourceType.values()) {
             if (type.getSourceTypeName().equalsIgnoreCase(name)) {
@@ -44,7 +44,7 @@ enum SourceType {
 
 public class Sources {
     private int sourceId;
-    private SourceType sourceType; // Changed from String to SourceType enum
+    private SourceType sourceType;
 
     public Sources(int sourceId, SourceType sourceType) {
         this.sourceId = sourceId;
@@ -71,12 +71,11 @@ public class Sources {
         this.sourceType = sourceType;
     }
 
-    // Get SourceType Code (if needed)
     public int getSourceTypeCode() {
         return sourceType.getCode();
     }
 
-    // Get SourceType Description (if needed)
+    
     public String getSourceTypeDesc() {
         return sourceType.getSourceTypeName();
     }
