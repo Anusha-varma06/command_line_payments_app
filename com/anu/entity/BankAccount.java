@@ -1,4 +1,4 @@
-package com.ram.entity;
+package com.anu.entity;
 
 public class BankAccount {
 
