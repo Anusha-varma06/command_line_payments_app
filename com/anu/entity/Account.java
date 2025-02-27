@@ -1,9 +1,6 @@
 package com.anu.entity;
-
 import java.sql.Date;
-
 public class Account {
-
 	private int userAccountId ;
 	private Date accountOpenDate;
 	private long currentWalletBalance;

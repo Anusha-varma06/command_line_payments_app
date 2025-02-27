@@ -1,5 +1,4 @@
 package com.anu.entity;
-
 enum SourceType {
     BANK_ACCOUNT("bankaccount", 1),
     WALLET_ACCOUNT("walletaccount", 2),

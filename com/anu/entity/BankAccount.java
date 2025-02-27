@@ -1,19 +1,17 @@
 package com.anu.entity;
-
 public class BankAccount {
-
 	private long bankAccountId ;
 	private long accountNumber ;
 	private String ifscCode;
 	private String actStatus;
 	private String bankName;
-	
+	private Users user;
 	public BankAccount() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 	public BankAccount(long bankAccountId, long accountNumber, String ifscCode, String actStatus, String bankName,
-			String bankAccountBranchLocation) {
+			String bankAccountBranchLocation,Users user){
 		super();
 		this.bankAccountId = bankAccountId;
 		this.accountNumber = accountNumber;
@@ -21,6 +19,7 @@ public class BankAccount {
 		this.actStatus = actStatus;
 		this.bankName = bankName;
 		this.bankAccountBranchLocation = bankAccountBranchLocation;
+		this.user=user;
 	}
 	
 	public long getBankAccountId() {
@@ -62,6 +61,10 @@ public class BankAccount {
 	public void setActStatus(String actStatus) {
 		this.actStatus = actStatus;
 	}
-	
-	
+	public Users getUser() {
+		return user;
+	}
+	public void setUser(Users user) {
+		this.user=user;
+	}
 }

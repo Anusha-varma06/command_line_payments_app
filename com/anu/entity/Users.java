@@ -1,9 +1,6 @@
 package com.anu.entity;
-
 import java.util.List;
-
 public class Users {
-
 	private int user_id ;
 	private String user_name;
 	private String password;
