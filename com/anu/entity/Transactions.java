@@ -1,4 +1,4 @@
-package com.ram.entity;
+package com.anu.entity;
 
 import java.util.Date;
 
