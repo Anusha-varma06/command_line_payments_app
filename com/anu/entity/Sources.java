@@ -1,4 +1,4 @@
-package com.ram.entity;
+package com.anu.entity;
 
 enum SourceType {
     BANK_ACCOUNT("bank_account", 1),
