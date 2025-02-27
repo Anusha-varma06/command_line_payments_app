@@ -10,7 +10,7 @@ public class Transactions {
 	private int sourceTypeId ; 
 	private int destTypeId ; 
 	private long txnAmount;
-	private Users user;
+	
 	
 	
 	public Transactions() {
