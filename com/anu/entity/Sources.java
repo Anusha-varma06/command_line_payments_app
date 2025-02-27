@@ -1,9 +1,9 @@
 package com.anu.entity;
 
 enum SourceType {
-    BANK_ACCOUNT("bank_account", 1),
-    WALLET_ACCOUNT("wallet_account", 2),
-    THIRD_PARTY("third_party", 3);
+    BANK_ACCOUNT("bankaccount", 1),
+    WALLET_ACCOUNT("walletaccount", 2),
+    THIRD_PARTY("thirdparty", 3);
 
     private final String sourceTypeName;
     private final int code;
