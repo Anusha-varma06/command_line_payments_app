@@ -1,4 +1,5 @@
 package com.anu.entity;
+import java.util.ArrayList;
 import java.util.List;
 public class Users {
 	private int user_id ;
@@ -9,10 +10,10 @@ public class Users {
 	private long phone_number;
 	private String email ;
 	private String address;
-	private List<BankAccount> Banks;
+	private List<BankAccount> Banks ;
 	
 	public Users(int user_id, String user_name, String password, String first_name, String last_name, long phone_number,
-			String email, String address, List<BankAccount> banks) {
+			String email, String address) {
 		super();
 		this.user_id = user_id;
 		this.user_name = user_name;
@@ -22,7 +23,7 @@ public class Users {
 		this.phone_number = phone_number;
 		this.email = email;
 		this.address = address;
-		Banks = banks;
+		Banks=new ArrayList<>();
 	}
 	public Users() {
 		super();
@@ -31,8 +32,8 @@ public class Users {
 	public List<BankAccount> getBanks() {
 		return Banks;
 	}
-	public void setBanks(List<BankAccount> banks) {
-		Banks = banks;
+	public void setBanks(BankAccount bank) {
+		Banks.add(bank);
 	}
 	public int getUser_id() {
 		return user_id;
@@ -81,6 +82,12 @@ public class Users {
 	}
 	public void setAddress(String address) {
 		this.address = address;
+	}
+	@Override
+	public String toString() {
+		return "Users [user_id=" + user_id + ", user_name=" + user_name + ", password=" + password + ", first_name="
+				+ first_name + ", last_name=" + last_name + ", phone_number=" + phone_number + ", email=" + email
+				+ ", address=" + address + ", Banks=" + Banks + "]";
 	}
 	
 
