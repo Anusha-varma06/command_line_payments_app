@@ -3,7 +3,7 @@ package com.anu.entity;
 import java.util.Date;
 
 public class Transactions {
-	private int txnId;
+	private static int txnId=10100;
 	private Date txnDateTime;
 	private int sourceUserId;
 	private int targetActId;
@@ -17,10 +17,10 @@ public class Transactions {
 		super();
 		
 	}
-	public Transactions(int txnId, Date txnDateTime, int sourceUserId, int targetActId, int sourceTypeId,
+	public Transactions(Date txnDateTime, int sourceUserId, int targetActId, int sourceTypeId,
 			int destTypeId, long txnAmount, Users user) {
 		super();
-		this.txnId = txnId;
+		txnId++;
 		this.txnDateTime = txnDateTime;
 		this.sourceUserId = sourceUserId;
 		this.targetActId = targetActId;
@@ -32,12 +32,10 @@ public class Transactions {
 	public int getTxnId() {
 		return txnId;
 	}
-	public void setTxnId(int txnId) {
-		this.txnId = txnId;
-	}
 	public Date getTxnDateTime() {
 		return txnDateTime;
 	}
+	
 	public void setTxnDateTime(Date txnDateTime) {
 		this.txnDateTime = txnDateTime;
 	}
@@ -74,8 +72,14 @@ public class Transactions {
 	public Users getUser() {
 		return user;
 	}
-	public void setUser(Users user) {
+	public void setUser(Users user) {       
 		this.user = user;
+	}
+	@Override
+	public String toString() {
+		return "Transactions [txnId="+ txnId +",txnDateTime=" + txnDateTime + ", sourceUserId=" + sourceUserId + ", targetActId="
+				+ targetActId + ", sourceTypeId=" + sourceTypeId + ", destTypeId=" + destTypeId + ", txnAmount="
+				+ txnAmount + "]";
 	}
 
 }

@@ -2,20 +2,20 @@ package com.anu.entity;
 import java.util.ArrayList;
 import java.util.List;
 public class Users {
-	private int user_id ;
+	private static int user_id=101;
 	private String user_name;
 	private String password;
 	private String first_name;
 	private String last_name;
-	private long phone_number;
+	private String phone_number;
 	private String email ;
 	private String address;
 	private List<BankAccount> Banks ;
 	
-	public Users(int user_id, String user_name, String password, String first_name, String last_name, long phone_number,
+	public Users(String user_name, String password, String first_name, String last_name, String phone_number,
 			String email, String address) {
 		super();
-		this.user_id = user_id;
+		user_id++;
 		this.user_name = user_name;
 		this.password = password;
 		this.first_name = first_name;
@@ -37,9 +37,6 @@ public class Users {
 	}
 	public int getUser_id() {
 		return user_id;
-	}
-	public void setUser_id(int user_id) {
-		this.user_id = user_id;
 	}
 	public String getUser_name() {
 		return user_name;
@@ -65,10 +62,10 @@ public class Users {
 	public void setLast_name(String last_name) {
 		this.last_name = last_name;
 	}
-	public long getPhone_number() {
+	public String getPhone_number() {
 		return phone_number;
 	}
-	public void setPhone_number(long phone_number) {
+	public void setPhone_number(String phone_number) {
 		this.phone_number = phone_number;
 	}
 	public String getEmail() {

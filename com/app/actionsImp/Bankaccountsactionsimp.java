@@ -1,8 +1,8 @@
 package com.app.actionsImp;
 import com.anu.entity.BankAccount;
 import com.anu.entity.Users;
-import com.app.actionsInterfaces.Bankaccountactionsinterface;
-public class Bankaccountsactionsimp implements Bankaccountactionsinterface {
+import com.app.actionsInterfaces.BankAccountActionsInterface;
+public class BankAccountsActionsImp implements BankAccountActionsInterface {
 	public void addAccounts(BankAccount ba) {
 		// TODO Auto-generated method stub
 		ba.getUser().setBanks(ba);

@@ -2,10 +2,10 @@ package com.app.actionsImp;
 import java.util.ArrayList;
 import java.util.List;
 import com.anu.entity.Users;
-import com.app.actionsInterfaces.Useractionsinterface;
-public class Useractionsimp implements Useractionsinterface{
-	List<Users> userlist=new ArrayList<>(); 
-	Users loggedin;
+import com.app.actionsInterfaces.UserActionsInterface;
+public class UserActionsImp implements UserActionsInterface{
+	static List<Users> userlist=new ArrayList<>(); 
+	 public Users loggedin;
 	public void userRegistration(Users user) {
 		// TODO Auto-generated method stub
 		userlist.add(user);
